@@ -10,6 +10,13 @@
 1. `sudo apt-get install certbot python3-certbot-apache`
 1. `sudo certbot --apache -d ###DOMÉNA###`
 
+### Fedora
+#### Nginx
+1. `dnf install certbot python3-certbot-nginx`
+
+#### Apache
+1. `dnf install certbot python3-certbot-apache`
+
 ### Alpine Linux
 Jen vygeneruje certifikát. Pro Alpine bez dockeru je zázrak, že vůbec něco.
 
