@@ -4,8 +4,8 @@ Postup zkoušen na LXC s Ubuntu 20.04 Focal Fossa (2 GB RAM a 1 vCPU). Server v 
 ## Ubuntu 20.04 Focal Fossa
 1. `apt-get update`
 1. `apt-get upgrade`
-1. `curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`
-1. `curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2017.list`
+1. `wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`
+1. `sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"`
 1. `sudo apt-get update`
 1. `sudo apt-get install mssql-server`
 1. `sudo /opt/mssql/bin/mssql-conf setup`
