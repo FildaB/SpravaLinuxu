@@ -2,9 +2,7 @@
 | OS                       | Container | Web server | PHP version | Worked in 2020 |
 |--------------------------|:---------:|:----------:|:-----------:|:--------------:|
 | Ubuntu 20.04 Focal Fossa | LXC       | Nginx      | php7.4-fpm  |        ✅       |
-| Debian 10 Buster         | KVM       | Nginx      | php7.3-fpm  |        ❌       |
-|                          |           |            |             |                |
-|                          |           |            |             |                |
+| Debian 10 Buster         | KVM       | Nginx      | php7.3-fpm  |        ✅       |
 
 ## Ubuntu 20.04 Focal Fossa
 1. `sudo su` (root práva jsou vyžadována pro instalaci)
@@ -31,3 +29,6 @@
 1. `printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini`
 1. `sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv` (lze přeskočit)
 1. `sudo service php7.4-fpm restart`
+
+## Debian 10
+U Debianu lze použít víceméně obdobný postup jako u Ubuntu.
