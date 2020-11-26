@@ -32,6 +32,21 @@ Zatímco u Windows se používá obrácené lomítko (`\`), u Linuxu lze použí
 1. `/etc/mail` - určeno pro konfigurace mail serveru
 1. `/etc/default` - konfigurace základních příkazů (ssh, ufw, useradd)
 1. `/etc/shadow` - obsahuje uživatelská hesla
+1. `/etc/host.conf` a `/etc/resolv.conf` - soubory konfigurace DNS
 
 ### /dev
-1. `/dev/null` - "černá díra" v Linuxu
+1. `/dev/null` - "černá díra" v Linuxu; cokoli, co se pošle do `/dev/null` nevratně zmizí *(takový odpadkový koš, který se okamžitě vyveze na skládku a okamžitě spálí)*
+1. `/dev/zero` - obdoba `/dev/null`; když se čte, vrací nulu
+1. `/dev/random` - generuje náhodná data
+1. `/dev/urandom` - generuje náhodná data, jen jiným způsobem než `/dev/random`
+
+### /var
+1. `/var/www` - adresář pro hostování webových stránek
+1. `/var/log` - nachází se v něm logy (soubory s událostmi) aplikací a systému
+1. `/var/named` - soubory pro chod DNS
+1. `/var/lib` - soubory vytvářené aplikacemi za běhu; zejména používaná databázemi MySQL a MSSQL nebo DHCP
+1. `/var/spool` - fronta systému (fronta automatizovaných úloh CRON, fronta mail serveru, tiskových služeb, ...)
+
+### /usr
+1. `/usr/share` - obsahuje sdílené soubory mezi aplikacemi (časové zóny, národní prostředí, fonty, ...)
+1. `/usr/include` - hlavičkové soubory v jazyce C
