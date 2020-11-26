@@ -6,8 +6,9 @@
 1. `cd` - *change directory* - změní složku (`cd /etc/www/`)
 1. `cp` - *copy* - kopíruje soubory (`cp /etc/www/stary_soubor.txt /root/zkopirovany_soubor.txt`)
 1. `chmod` - *change mode* - změna oprávnění k souboru (`chmod 777 soubor.txt`)
+1. `chmod +t` - zakáže úpravu jiným uživatelům, než jeho vlastníkovi, ale nezakáže jim ho otevřít a spustit (`chmod +t soubor.txt`)
 1. `chown` - *change owner* - změna vlastníka souboru (`chown root soubor.txt`)
-1. `ls` - *list* - ukáže soubory a podsložky (`ls`)
+1. `ls` - *list* - ukáže soubory a podsložky (`ls -la`)
 1. `mkdir` - *make directory* - vytvoří složku (`mkdir moje_slozka/`)
 1. `mv` - *move* - přesouvá soubory (`mv soubor.txt /etc/www/`)
 1. `pwd` - *print working directory* - ukáže ve které složce se nacházím (`pwd`)
@@ -31,6 +32,7 @@
 ## Správa uživatelů
 1. `useradd` - *user add* - přidá uživatele (`useradd uzivatel`)
 1. `userdel` - *user delete* - smaže uživatele (`userdel uzivatel`)
+1. `id` - zobrazí UID, GID aktuálního uživatele (`id`)
 1. `passwd` - *password* - změní heslo (`passwd root`)
 
 ## Procesy
@@ -46,3 +48,4 @@
 1. `echo` - výpis textu (`echo "text"`)
 1. `history` - historie použitých příkazů - *o důvod víc nedávat hesla přímo do příkazů*
 1. `ping` - zjistí odezvu, podobné jako ve Windows
+1. `which` - hledá umístění spustitelného souboru, který má spojitost s určitým příkazem (`which mount`, `which ping`, `which apt`)
