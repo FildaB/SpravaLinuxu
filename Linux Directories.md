@@ -1,5 +1,5 @@
 # Adresáře v Linuxu
-Kořenem je `/`, obdobně jako `C:\` u Windows.
+Kořenem je `/`, obdobně jako `C:\` u Windows.\
 Zatímco u Windows se používá obrácené lomítko (`\`), u Linuxu lze použít jedině běžné lomítko (`/`).
 
 ## Základní struktura
@@ -24,3 +24,14 @@ Zatímco u Windows se používá obrácené lomítko (`\`), u Linuxu lze použí
 1. `/bin` - obsahuje aplikace (`C:\Program Files` ve Windows)
 1. `/opt` - obsahuje aplikace, se kterými Linux nemá nic společného (`C:\Program Files` ve Windows)
 1. `/sbin` - další adresář pro aplikace, ale tentokrát jen pro ty, které může spustit superuživatel "root"
+
+## Podadresáře
+### /etc
+1. `/etc/crontab` - obsahuje data automatizovaných úloh CRON
+1. `/etc/hosts` - obsahuje IP adresy počítačů
+1. `/etc/mail` - určeno pro konfigurace mail serveru
+1. `/etc/default` - konfigurace základních příkazů (ssh, ufw, useradd)
+1. `/etc/shadow` - obsahuje uživatelská hesla
+
+### /dev
+1. `/dev/null` - "černá díra" v Linuxu
