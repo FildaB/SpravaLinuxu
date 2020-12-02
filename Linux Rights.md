@@ -1,16 +1,37 @@
 # Práva v Linuxu
 
+## Základní rozdělení oprávnění
+K souborům a složkám nemusí mít každý v systému přístup. Pomáhá to například k bezpečnosti a správná volba oprávnění ke složce může být dokonce kritická (např. na webovém serveru).
+
+Přístup k souboru lze upravit:
+1. Jednomu konkrétnímu uživateli (vlastníkovi)
+1. Jedné konkrétní skupině
+1. Těm ostatním (ti, co nejsou ani tím vybraným uživatelem, ani ve skupině)
+
+## Vlastnictví souboru a složky
+### Uživatel (vlastník)
+Ten, kdo soubor/složku vytvoří, je jeho vlastník. Vlastník ale může být kdykoli změněn příkazem `chown` (*change owner*), například `chown uzivatel:jeho_skupina soubor.txt`.
+
+### Skupina
+V Linuxu (ale i ostatních OS) existují skupiny. Každý uživatel může do nějaké skupiny patřit.
+Skupina tak může mít rozdílná oprávnění než vlastník souboru, zároveň ale i rozdílná oprávnění než všichni ostatní uživatelé.
+
+*Například pokud vytvářím server, na který se bude přihlašovat firma, je vhodné každé oddělení dát do skupiny. Například *vedení*, *ekonomický úsek*, *zaměstnanci*, *IT*. Vzhledem k rozsáhlým kybernetickým útokům v poslední době je tento postup více než žádoucí, všechno kromě *IT* by mělo mít omezená práva. A například pokud chci, aby do složky mělo přístup jen vedení, tak vlastníkem složky nastavím danou skupinu.*
+
+### Ostatní
+Jsou ti, kteří nespadají do dvou zmíněných kategorií. *Obvykle by měli mít nižší nebo stejná práva.*
+
 ## Zobrazení v `ls -l`
 Zobrazí práva v následujícím formátu: `drwxrwxrwx`
 
 ### Zakládní rozdělení
 | d   | rwx                 | rwx                         | rwx                           |
 |-----|---------------------|-----------------------------|-------------------------------|
-| Typ | Oprávnění vlastníka | Oprávnění skupiny vlastníka | Oprávnění ostatních uživatelů |
+| Typ | Oprávnění vlastníka | Oprávnění skupiny           | Oprávnění ostatních uživatelů |
 
 1. První znak `d` znamená složka (**directory**). Pomlčka `-` by označovala soubor, např. `-rwxrwxrwx`.
 1. Další tři znaky označují oprávnění vlastníka.
-1. Další tři znaky označují oprávnění skupiny, do které vlastník patří.
+1. Další tři znaky označují oprávnění určité skupiny.
 1. Další tři znaky označují oprávnění ostatních uživatelů systému.
 
 ### Rozdělení práv
@@ -35,4 +56,4 @@ I tak platí předchozí tabulka, jen je v číselné podobně.
 
 | 7                   | 7                           | 7                             |
 |---------------------|-----------------------------|-------------------------------|
-| Oprávnění vlastníka | Oprávnění skupiny vlastníka | Oprávnění ostatních uživatelů |
+| Oprávnění vlastníka | Oprávnění skupiny           | Oprávnění ostatních uživatelů |
