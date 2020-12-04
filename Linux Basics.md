@@ -49,3 +49,7 @@
 1. `history` - historie použitých příkazů - *o důvod víc nedávat hesla přímo do příkazů*
 1. `ping` - zjistí odezvu, podobné jako ve Windows
 1. `which` - hledá umístění spustitelného souboru, který má spojitost s určitým příkazem (`which mount`, `which ping`, `which apt`)
+
+# Složitější příkazy
+## Správa uživatelů
+1. `awk -F: '{ print $1}' /etc/passwd` - zobrazí všechny uživatele systémy
