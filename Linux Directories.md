@@ -13,7 +13,7 @@ Zatímco u Windows se používá obrácené lomítko (`\`), u Linuxu lze použí
 ### Systémové adresáře
 1. `/boot` - obsahuje boot loader, zavadeče, jádro systému, Kernel (`C:\Windows` ve Windows)
 1. `/dev` - abstraktní adresář, který je ale stěžejní pro OS a obsahuje různá další zařízení (klávesnice, myši, IO, harddisky)
-1. `/lib` - různé zdrojové kódy systému (*C:\Users\* ve Windows)
+1. `/lib` - různé zdrojové kódy systému (`C:\Users\` ve Windows)
 1. `/lost+found` - "ztráty a nálezy" souborového systému; obsahuje soubory, které souborový systém (např. FAT32) opravil
 1. `/mnt` - připojená zařízení (HDD disky, USB, diskety; ve Windows např. `D:\`, `E:\`, `F:\`)
 1. `/proc` - nachází se v něm informace o aktuálně spuštěných procesech
@@ -22,7 +22,7 @@ Zatímco u Windows se používá obrácené lomítko (`\`), u Linuxu lze použí
 
 ### Obdoby Program Files
 1. `/bin` - obsahuje aplikace (`C:\Program Files` ve Windows)
-1. `/opt` - obsahuje aplikace, se kterými Linux nemá nic společného (`C:\Program Files` ve Windows)
+1. `/opt` - obsahuje aplikace, které nebyly dodány s Linuxem (`C:\Program Files` ve Windows)
 1. `/sbin` - další adresář pro aplikace, ale tentokrát jen pro ty, které může spustit superuživatel "root"
 
 ## Podadresáře
