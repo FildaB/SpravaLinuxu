@@ -17,7 +17,7 @@ Jednoduchá tabulka:
 
 # Příkaz SELECT
 
-## Intro k zarámování do pokoje
+## Přehledné vysvětlení
 `SELECT` - výběr dat z tabulky. Ustálená forma (přes to nejede vlak):
 ```
 SELECT ... FROM ... WHERE ... ORDER BY ...
