@@ -19,6 +19,18 @@ Existuje mnoho cest, jak instalovat Wazuh Agent. Ta nejjednodušší je:
 1. V `<ossec_config><client><server><address>` může být potřeba změnit IP. - *lze přeskočit*
 1. service wazuh-agent start
 
+## Informace
+### Kde má Wazuh své uplatnění
+Wazuh se hodí zejména pro
+1. významné projekty, kde není prostor pro ruční hledání chyb v systému, logu, souborech, ...
+1. provozovatele hostingu
+1. bankovní, finanční a vládní sektor
+
+Naopak zbytečný může být pro
+1. osobní a domácí server
+1. menší projekty
+1. servery s méně než 4 GB RAM a 2 jádry (byť oficiální požadavky to netvrdí)
+
 ## Časté potíže při instalaci
 ### Wazuh Server
 #### Čekám hodinu a nic se neděje
