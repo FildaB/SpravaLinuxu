@@ -52,4 +52,4 @@
 
 # Složitější příkazy
 ## Správa uživatelů
-1. `awk -F: '{ print $1}' /etc/passwd` - zobrazí všechny uživatele systémy
+1. `awk -F: '{ print $1}' /etc/passwd` - zobrazí všechny uživatele systému
