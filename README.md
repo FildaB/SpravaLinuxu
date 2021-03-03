@@ -1,4 +1,2 @@
-# Windows Server and Linux
-Private respository containing scripts for Windows Server and Linux administration.
-
-Applies to: Windows Server 2019, Debian, Ubuntu, Alpine Linux
+# Osobní poznámky ke správě Linuxu
+✅ Debian 10 ✅ Ubuntu 20.04 ✅ Alpine Linux 3.12 ✅ Fedora 32
