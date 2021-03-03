@@ -1,6 +1,5 @@
 # Běžné příkazy v Linuxu
 1. **`man` - manuál ke každému příkazu** (`man cd`)
-1. [klávesa **TAB**] - dokončí příkaz (a má i další funkce)
 
 ## Manipulace se složkami a soubory
 1. `cd` - *change directory* - změní složku (`cd /etc/www/`)
@@ -36,8 +35,10 @@
 1. `passwd` - *password* - změní heslo (`passwd root`)
 
 ## Procesy
-1. `kill` - "zabije" (okamžitě ukončí; *slovo okamžitě je však kontroverzní*) proces (`kill 7580` - číslo PID - *process ID*)
-1. `top` - ukáže detailní přehled o běžících procesech, včetně zmíněného PID
+1. `kill` - ukončí proces (`kill 7580` - číslo PID - *process ID*)
+2. `killall` - ukončí proces podle jména (`killall nginx`; pokud není příkaz nalezen, je potřeba ho nainstalovat `apt-cache search psmisc`)
+3. `ps` - zobrazí běžící procesy
+4. `top` - ukáže detailní přehled o běžících procesech a prostředcích systému (*Správce úloh ve Windows*; ukončuje se klávesou `q`)
 
 ## Informace o zařízení
 1. `df` - *disk free* - informace o volném místě na disku
@@ -50,6 +51,6 @@
 1. `ping` - zjistí odezvu, podobné jako ve Windows
 1. `which` - hledá umístění spustitelného souboru, který má spojitost s určitým příkazem (`which mount`, `which ping`, `which apt`)
 
-# Složitější příkazy
+# Hodí se
 ## Správa uživatelů
 1. `awk -F: '{ print $1}' /etc/passwd` - zobrazí všechny uživatele systému
