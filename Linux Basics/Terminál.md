@@ -23,7 +23,7 @@
 ## `!`
 1. `!!` - provede poslední příkaz znovu
 
-### Vzácné příkazy
+### Další příkazy
 3. `!top` - provede příkaz `top` tak, jak byl naposledy proveden
 4. `!top:p` - zobrazí jak by byl příkaz `!top` proveden
 5. `!$` - provede poslední slovo posledního příkazu (pokud byl poslední příkaz `cd /slozka` pak se provede `/slozka`)
