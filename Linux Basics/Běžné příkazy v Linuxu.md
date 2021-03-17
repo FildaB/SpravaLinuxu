@@ -31,26 +31,30 @@
 ## Správa uživatelů
 1. `useradd` - *user add* - přidá uživatele (`useradd uzivatel`)
 1. `userdel` - *user delete* - smaže uživatele (`userdel uzivatel`)
-1. `id` - zobrazí UID, GID aktuálního uživatele (`id`)
-1. `passwd` - *password* - změní heslo (`passwd root`)
+2. `usermod` - *user modify* - provádí změny s uživatelským účtem (`usermod -aG sudo` - přidá uživatele do skupiny `sudo`)
+3. `id` - zobrazí UID, GID aktuálního uživatele (`id`)
+4. `passwd` - *password* - změní heslo (`passwd root`)
 
 ## Procesy
 1. `kill` - ukončí proces (`kill 7580` - číslo PID - *process ID*)
 2. `killall` - ukončí proces podle jména (`killall nginx`; pokud není příkaz nalezen, je potřeba ho nainstalovat `apt-cache search psmisc`)
 3. `ps` - zobrazí běžící procesy
-4. `top` - ukáže detailní přehled o běžících procesech a prostředcích systému (*Správce úloh ve Windows*; ukončuje se klávesou `q`)
+4. `top` - ukazuje detailní přehled o běžících procesech a prostředcích systému (*Správce úloh ve Windows*; ukončuje se klávesou `q`)
 
 ## Informace o zařízení
 1. `df` - *disk free* - informace o volném místě na disku
 1. `du` - *disk usage* - informace o využití disku
 1. `uname` - *unix name* - název Linuxu
+1. `uptime` - informace o délce běhu systému
 
 ## Ostatní
 1. `echo` - výpis textu (`echo "text"`)
 1. `history` - historie použitých příkazů - *o důvod víc nedávat hesla přímo do příkazů*
 1. `ping` - zjistí odezvu, podobné jako ve Windows
+2. `shutdown` - vypne/restartuje zařízení
 1. `which` - hledá umístění spustitelného souboru, který má spojitost s určitým příkazem (`which mount`, `which ping`, `which apt`)
 
 # Hodí se
 ## Správa uživatelů
 1. `awk -F: '{ print $1}' /etc/passwd` - zobrazí všechny uživatele systému
+2. `usermod -aG sudo UZIVATEL` - přidá uživatele `UZIVATEL` do skupiny `sudo` (bude mít práva superuživatele)
